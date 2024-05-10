@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pass">
+        <div class="card">
+      <h1>Password Strength Indicator</h1>
+       <input type="password" id="password" placeholder="type a password">
+       <div class="boxes">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+       </div>
+       <p id="output" style="color: red;"></p>
+       <button onclick="but()">submit</button>
+       </div>
+    </div>
+  </body>
+  <script>
+    var password=document.getElementById("password")
+    var output=document.getElementById("output")
+    var box1=document.querySelector(".box1")
+    var card=document.getElementById("card")
+    var box2=document.querySelector(".box2")
+    function but(){
+        var passVal=password.value;
+    if(passVal!=="" && passVal.length<5)
+    {
+      output.innerHTML="Your password is weak";
+      box1.classList.add("weak")
+    }
+    else{
+        output.innerHTML="";
+        box1.classList.remove("weak")
+    }
+    if(passVal>=5 && passVal<=10 )
+        {
+         output.innerHTML="Your password is medium";
+         box1.classList.remove("weak") 
+         box2.classList.add("medium")
+        }
+}
+  </script>
+</html>

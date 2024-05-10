@@ -1,0 +1,47 @@
+.pass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card input:focus{
+outline: 0;
+border-color: rgb(146, 226, 146);
+
+}
+.card input{
+    padding:10px;
+    width:300px;
+    border-radius: 10px;
+}
+.box1{
+    margin-top: 10px;
+    width:100px;
+    height: 5px;
+    border-radius: 50px;
+    background-color:lightgray;
+}
+.box2{
+    margin-top: 10px;
+    width:100px;
+    height: 5px;
+    border-radius: 50px;
+    background-color:lightgray;
+}
+.box3{
+    margin-top: 10px;
+    width:100px;
+    height: 5px;
+    border-radius: 50px;
+    background-color:lightgray;
+}
+.boxes{
+    display: flex;
+    gap:5px
+}
+.weak{
+    background-color: red;
+}
+.medium{
+    background-color: yellow;
+}
